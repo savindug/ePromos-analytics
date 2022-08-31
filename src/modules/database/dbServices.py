@@ -1,8 +1,8 @@
 from src.modules.database.dbQuaries import *
 
 
-def add_product(product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size, conn):
-    insert_product(product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size, conn)
+def add_product(product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size, page_no, position, conn):
+    insert_product(product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size, page_no, position, conn)
 
 
 def get_epromos_products(categoryId):

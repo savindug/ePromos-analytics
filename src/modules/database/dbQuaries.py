@@ -29,9 +29,9 @@ def create_product_table(table_name):
 
 
 def insert_product(product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category,
-                   size, conn):
-    query = "INSERT INTO [product_matching].[4imprint_products] ([code],[name],[price],[product_page],[img],[desc],[category], [size]) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"
-    data = (product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size)
+                   size, page_no, position, conn):
+    query = "INSERT INTO [product_matching].[4imprint_products] ([code],[name],[price],[product_page],[img],[desc],[category], [size], [page], [position]) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+    data = (product_no, product_name, product_price, product_page_url, product_img, product_desc_list, category, size, page_no, position)
     try:
         print("Inserting Values into table 4imprint_products")
         conn.cursor().execute(query, data)
